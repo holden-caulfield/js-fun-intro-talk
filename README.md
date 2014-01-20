@@ -1,7 +1,7 @@
 js-fun-intro-talk
 =================
 
-These repository contains the materials used for a presentation called "Functional Programming, why should you care?", which is aimed for javascript developers that want to do a first glimpse on Functional Programming and understand how it is both an influence to javascript so far and a door opening possibilities for javascript on the future.
+This repository contains the materials used for a presentation called "Functional Programming, why should you care?", which is aimed for javascript developers that want to do a first glimpse on Functional Programming and understand how it is both an influence to javascript so far and a door opening possibilities for javascript on the future.
 
 In addition to the presentation slides, the presentation is supported by a coding sample. In the example, a simplified (but still real-life) problem is addressed with javascript using [node.js](http://nodejs.org) and incrementally incorporating functional programming idioms to the solution.
 
@@ -15,11 +15,11 @@ The problem used for this exercise is inspired by the excelent resource site [Fr
 
 Each version of the solution addresses the problem in an incrementally more "functional" way:
 
-# Example #1 uses *no functional constructs at all* and relies heavily on node's event system. The usual techniques to reduce callback hell (e.g. callback modularization and naming) are used.
+- Example #1 uses *no functional constructs at all* and relies heavily on node's event system. The usual techniques to reduce callback hell (e.g. callback modularization and naming) are used.
 
-# Example #2 adds *some basic functional constructs* that are more or less "mainstream" on javascript due to libraries like underscore.js. Things such as replacing imperative loops by high order functions, function composition, etc.
+- Example #2 adds *some basic functional constructs* that are more or less "mainstream" on javascript due to libraries like underscore.js. Things such as replacing imperative loops by high order functions, function composition, etc.
 
-# Example #3 aims to *go functional to a wider extent* and change the callback oriented structure of the solution into a promises-driven one. Libraries and concepts here are less common in mainstream state-of-the-art javascript.
+- Example #3 aims to *go functional to a wider extent* and change the callback oriented structure of the solution into a promises-driven one. Libraries and concepts here are less common in mainstream state-of-the-art javascript.
 
 Running the Code
 ----------------
@@ -28,12 +28,12 @@ Each example must be installed and can be run separatedly in isolation. You need
 
 Each example has its dependencies explicitly declare the standard way on its own *package.json* file. To prepare/install an example, just get into that particular example's folder run the usual [npm](https://npmjs.org) command, for example:
 
-`cd 1-callbacks
-npm install`
+	cd 1-callbacks
+	npm install
 
 Will prepare the first example. Then, you can run it with the usual node command and passing two extra arguments for the keyword and the amount of targeted results. So for example:
 
-`node callbacks.js functional 4`
+	node callbacks.js functional 4
 
 Will search for up to 4 articles that contain the word "functional" somewhere. 
 
@@ -41,25 +41,23 @@ During the execution any errors (request timeouts, unparsable content, non-suppo
 
 So, a possible output would look like: 
 
-`
-Looking for 4 articles matching 'functional'
-[Error: Protocol:https: not supported.]
-[Error: Protocol:https: not supported.]
-[Error: Protocol:https: not supported.]
-[Error: Protocol:https: not supported.]
-[Error: Protocol:https: not supported.]
-[Error: Protocol:https: not supported.]
-[Error: Protocol:https: not supported.]
-{ source: 'EchoJS',
-  uri: 'http://blakeembrey.com/articles/compose-functions-javascript/' }
-{ source: 'EchoJS',
-  uri: 'http://mrjoelkemp.com/2014/01/javascript-an-exploration-of-prototypal-inheritance/' }
-{ source: 'SitePoint',
-  uri: 'http://www.sitepoint.com/practical-guide-angularjs-directives-part-two/' }
-{ source: 'EchoJS',
-  uri: 'http://www.2ality.com/2014/01/tc39-march-november-2013.html' }
-Done. Exiting...
-`
+	Looking for 4 articles matching 'functional'
+	[Error: Protocol:https: not supported.]
+	[Error: Protocol:https: not supported.]
+	[Error: Protocol:https: not supported.]
+	[Error: Protocol:https: not supported.]
+	[Error: Protocol:https: not supported.]
+	[Error: Protocol:https: not supported.]
+	[Error: Protocol:https: not supported.]
+	{ source: 'EchoJS',
+	  uri: 'http://blakeembrey.com/articles/compose-functions-javascript/' }
+	{ source: 'EchoJS',
+	  uri: 'http://mrjoelkemp.com/2014/01/javascript-an-exploration-of-prototypal-inheritance/' }
+	{ source: 'SitePoint',
+	  uri: 'http://www.sitepoint.com/practical-guide-angularjs-directives-part-two/' }
+	{ source: 'EchoJS',
+	  uri: 'http://www.2ality.com/2014/01/tc39-march-november-2013.html' }
+	Done. Exiting...
 
 Disclaimers
 -----------
