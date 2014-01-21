@@ -1,0 +1,8 @@
+{
+  "name": "fun-example-callbacks",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "rssparser": ">=0.0.4"
+  }
+}
