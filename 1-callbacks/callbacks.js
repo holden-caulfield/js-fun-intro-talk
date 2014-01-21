@@ -1,3 +1,9 @@
+/**
+  Examples for a Javascript talk:
+  "Functional Programming, why should you care?"
+
+  Example 1 - Callbacks
+*/
 var parser = require('rssparser'),
     http = require("http"),
     events = require('events'),
@@ -23,12 +29,19 @@ var parser = require('rssparser'),
     kw = process.argv[2],
     target=process.argv[3];
 
+//fist line that gets executed, just logs the parameters in a readable fashion
 console.log("Looking for " + target + " articles matching '" + kw +"'" );
 
+//optimized approach for clarity, naming every callback and defining the chain of events
+//explicitly and altogether
 emitter.on("feed", parseFeed);
 emitter.on("news", fetchItem);
 emitter.on("fetched", selectRelevant);
 emitter.on("select", sendToOutput);
+
+//below the functions for the different named event handlers
+//notice that some functions emit particular events, something that needs to be 
+//tracked manually if you are a new guy that is reading this code
 
 function parseFeed(feed) {
   parser.parseURL(feed.url, {}, function(err, out) {
@@ -83,12 +96,18 @@ function sendToOutput(item) {
   }
 }
 
+// a simple utilitary function, this one returns the first argument 
+// passed that is not undefined, it is useful because different RSS 
+// feeds may have the URL for the contents on a different field
 function firstOf() {
   for (var i = 0; i < arguments.length; i++) {
     if (arguments[i]) return arguments[i];
   }
 }
 
+//this is actually the first computation that is executed and is "hidden" at the end of the code
+//notice that if this is executed before the event handling registration, it will not crash
+//but it would sliently do nothing, as the events would be emitted with no hanlder to catch them
 for (i=0; i<feeds.length; i++) {
   emitter.emit("feed", feeds[i]);
 }
