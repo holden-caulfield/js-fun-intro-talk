@@ -15,7 +15,7 @@ The problem used for this exercise is inspired by the excelent resource site [Fr
 
 Each version of the solution addresses the problem in an incrementally more "functional" way:
 
-- Example #1 uses *no functional constructs at all* and relies heavily on node's event system. The usual techniques to reduce callback hell (e.g. callback modularization and naming) are used.
+- [Example #1](https://github.com/holden-caulfield/js-fun-intro-talk/tree/master/1-callbacks) uses *no functional constructs at all* and relies heavily on node's event system. The usual techniques to reduce callback hell (e.g. callback modularization and naming) are used.
 
 - Example #2 adds *some basic functional constructs* that are more or less "mainstream" on javascript due to libraries like underscore.js. Things such as replacing imperative loops by high order functions, function composition, etc.
 
@@ -66,8 +66,8 @@ The current third party software is used on this example:
 
 - [node.js](nodejs.org). The *http* and *events* modules are required within the code
 - [underscore.js](underscorejs.org). Some of its functionality got to be extended to be more functional. Details on that in the Example #2 readme
-- [node-rssparser](https://github.com/tk120404/node-rssparser) a very nice library to fetch RSS feeds and parse them into json
-- [Q](https://github.com/kriskowal/q) a [Promises/A](http://wiki.commonjs.org/wiki/Promises/A) complaint promises library. Details on its usage and why I picked Q vs other libraries on Example #3 readme.
+- [node-rssparser](https://github.com/tk120404/node-rssparser): a very nice library to fetch RSS feeds and parse them into json
+- [Q](https://github.com/kriskowal/q): a [Promises/A](http://wiki.commonjs.org/wiki/Promises/A) complaint promises library. Details on its usage and why I picked Q vs other libraries on Example #3 readme.
 
 Disclaimers
 -----------
