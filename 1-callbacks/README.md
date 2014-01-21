@@ -54,7 +54,7 @@ A more important issue arises as to *when* to register the event handlers vs. wh
 
 If you put this *before* registering the handlers, then the code will not crash (meaning it is still syntactically and semantically correct) but will not do what you expect to do. This is because the events are emitted once, and with no handlers to catch them. Once you register the hanlders, it is already too late. In a more complicated environment, that may include page loads, requests finishing, etc. having to control this timing can be cumbersome or even force you to use something like *setTimeout* just to wait "enough" time before executing things.
 
-Finally, in this case we are working with a direct "chain" of steps, so it is more or less predictable that one handling function will emit the next event in the chain. Other processes may be more complicated with "branches" that you need to coordinate, etc. In those cases it is a critical difference to notice that on a callback based solution each callback function, by design, *returns nothing*. This what the data needs to be passed by other channels instead of simply function call return values: the events emitted, shared memory, etc. 
+Finally, in this case we are working with a direct "chain" of steps, so it is more or less predictable that one handling function will emit the next event in the chain. Other processes may be more complicated with "branches" that you need to coordinate, etc. In those cases it is a critical difference to notice that on a callback based solution each callback function, by design, *returns nothing*. Since you can't use return values the data needs to be passed by other channels instead: the events emitted, shared memory, etc. 
 
 Imperative loops
 ----------------
