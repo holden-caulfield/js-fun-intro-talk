@@ -59,6 +59,16 @@ So, a possible output would look like:
 	  uri: 'http://www.2ality.com/2014/01/tc39-march-november-2013.html' }
 	Done. Exiting...
 
+Libraries Used
+--------------
+
+The current third party software is used on this example:
+
+- [node.js](nodejs.org). The *http* and *events* modules are required within the code
+- [underscore.js](underscorejs.org). Some of its functionality got to be extended to be more functional. Details on that in the Example #2 readme
+- [node-rssparser](https://github.com/tk120404/node-rssparser) a very nice library to fetch RSS feeds and parse them into json
+- [Q](https://github.com/kriskowal/q) a [Promises/A](http://wiki.commonjs.org/wiki/Promises/A) complaint promises library. Details on its usage and why I picked Q vs other libraries on Example #3 readme.
+
 Disclaimers
 -----------
 
