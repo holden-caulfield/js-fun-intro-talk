@@ -85,13 +85,17 @@ function selectRelevant(item) {
 
 function sendToOutput(item) {
   if (found++ < target) {
+    //we take care here of logging only the items we know are always defined
     console.log({
       "source": item.source,
       "uri": item.uri
     });
   } else {
     console.log("Done. Exiting...");
+    //ugly, but tidy exit. We remove the listeners for extra-tidyness (LOL)...
     emitter.removeAllListeners();
+    //...then we just kill the process. Our work is done and we 
+    //don't want to keep making requests or waiting for results
     process.exit();
   }
 }

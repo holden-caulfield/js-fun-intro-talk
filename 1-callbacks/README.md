@@ -1,7 +1,7 @@
 Example 1 - Callbacks
 =====================
 
-This version of the example relies heavily on node's event system and callbacks to handle the asynchronous computations. The readme below discusses the challenges found during this approach, with a biased focus on what is ugly/cumbersome and may be improved with a different approach.
+This version of the example relies heavily on node's event system and callbacks to handle the asynchronous computations. The sections below discusses the challenges found during this approach, with a biased focus on what is ugly/cumbersome and may be improved with a different approach.
 
 Coping with callback hell
 -------------------------

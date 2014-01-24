@@ -8,7 +8,7 @@ In addition to the presentation slides, the presentation is supported by a codin
 The slides and each example are on separated folders so people can read/run them separatedly. Below there is a general description of the code example approach, and then each example has its own readme to dig into details.
 
 
-The Code
+The code
 --------
 
 The problem used for this exercise is inspired by the excelent resource site [Front End Rescue](http://uptodate.frontendrescue.org/). The idea was to create a simple command line tool that given a keyword and a target amount of results, look for articles on the RSS feeds of the sites in the "blogs" section of the site
@@ -21,7 +21,7 @@ Each version of the solution addresses the problem in an incrementally more "fun
 
 - Example #3 aims to *go functional to a wider extent* and change the callback oriented structure of the solution into a promises-driven one. Libraries and concepts here are less common in mainstream state-of-the-art javascript.
 
-Running the Code
+Running the code
 ----------------
 
 Each example must be installed and can be run separatedly in isolation. You need to have *node.js* installed on your system. *Node.js v0.10.24* was used during the development and presentation of this example, but since the example doesn't use fancy features, etc. is likely to run well on other versions as well.
@@ -59,7 +59,7 @@ So, a possible output would look like:
 	  uri: 'http://www.2ality.com/2014/01/tc39-march-november-2013.html' }
 	Done. Exiting...
 
-Libraries Used
+Libraries used
 --------------
 
 The current third party software is used on this example:
