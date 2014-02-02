@@ -21,13 +21,15 @@ What was actually improved
 
 With underscore and the "funderscore" improvements discussed above, we have a way to do local improvements to some parts of the code.
 
-The first and most obvious thing is to improve imperative loops. Again, this is probably the most widespread use of functional programming concepts in javascript. Even though you may think about them as functions for "collections" (actually underscore calls them that way), in functional programming the concepts of map, filter, etc. apply to things that are not collections as well. If you want to dig more on that, you can check about functors, monads and category theory in general... out of the scope of this example. For this example, all you need to know is the base idea of high order functions: this is functions that may take functions as parameters or return functions as result.
+The first and most obvious thing is to improve imperative loops. Again, this is probably the most widespread use of functional programming concepts in javascript. Even though you may think about them as functions for "collections" (actually underscore calls them that way), in functional programming the concepts of map, filter, etc. apply to things that are not collections as well. If you want to dig more on that, you can check about [functors, monads](http://learnyouahaskell.com/functors-applicative-functors-and-monoids), and if you feel brave enough [category theory in general](http://en.wikibooks.org/wiki/Haskell/Category_theory)... 
+
+...anyway, is out of the scope of this example. For this example, all you need to know is the base idea of *high order functions*: this is functions that may take functions as parameters or return functions as result.
 
 So, our initial loop over the feeds can be changed to:
 
 	_.each(feeds, parseFeed);
 
-The other improvement we can make is at the *parseFeed* function, here we need to make a slightly more sophisticated trick combining what we know with the concept of partial application: the idea that you can get a function that receives several parameters and use partial application to get back a function that has some of them already applied.
+The other improvement we can make is at the *parseFeed* function, here we need to make a slightly more sophisticated trick combining what we know with the concept of *partial application*: the idea that you can get a function that receives several parameters and pre-apply only a subset of them to get back a function that you can call with the remaining parameters (once or many times) in a future sentence.
 
 This is when our change to _.extend comes to play, so we can do this:
 
@@ -37,11 +39,11 @@ Here we are creating a *new function* that will extend any given object with the
 
 Notice that we have a *var* declaration whose value is a function. This is totally valid in javascript, but may be more or less weird to you. With a functional programming mindset, values can be functions: is just another type they may have.
 
-Finally, we pass the function we just created to *_.map* it over the list of items from the feed, and for *_.each* of them we invoke the next step (*fetchItem*)
+Finally, we pass the function we just created to *_.map* it over the list of items from the feed, and for *_.each* of them we invoke the next step, *fetchItem*
 
 	_.each(_.map(out.items, addSource), fetchItem);
 
-This may result a bit harder to follow until you get used to it, but once you do it has the benefit of making a stronger focus on *what* to do instead of *how* to do it. There's no index variables, no intermediate variables to handle the items whithin the collection, etc. This makes it also less error prone: is very hard to get one of this functional constructs "almost right". Either they are correct, or they fail in your face.
+This may result a bit harder to follow until you get used to it, but once you do it quickly becomes more readable. It has the benefit of making a stronger focus on *what* to do instead of *how* to do it. There's no index variables, no intermediate variables to handle the items whithin the collection, etc. This makes it also less error prone: is very hard to get one of this functional constructs "almost right". Either they are correct, or they fail in your face.
 
 Compromises and remainig challenges 
 -----------------------------------
