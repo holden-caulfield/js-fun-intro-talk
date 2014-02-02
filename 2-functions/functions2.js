@@ -2,7 +2,7 @@
   Examples for a Javascript talk:
   "Functional Programming, why should you care?"
 
-  Example 2 - Functions
+  Example 2 - Functions (alternative with full event chain)
 */
 var parser = require('rssparser'),
     http = require("http"),
@@ -92,11 +92,10 @@ function selectRelevant(item) {
 }
 
 function sendToOutput(item) {
-  if (found++ < target) {
-    //underscore provides a more elegant solution for logging what's available on each case
-    //we can actually add some more fields if we are interested
-    console.log(_.pick(item, ["source", "uri", "title"]));
-  } else {
+  //underscore provides a more elegant solution for logging what's available on each case
+  //we can actually add some more fields if we are interested
+  console.log(_.pick(item, ["source", "uri", "title"]));
+  if (++found >= target) {
     console.log("Done. Exiting...");
     //ugly, but tidy exit. We remove the listeners for extra-tidyness (LOL)...
     emitter.removeAllListeners();

@@ -84,13 +84,12 @@ function selectRelevant(item) {
 }
 
 function sendToOutput(item) {
-  if (found++ < target) {
-    //we take care here of logging only the items we know are always defined
-    console.log({
-      "source": item.source,
-      "uri": item.uri
-    });
-  } else {
+  //we take care here of logging only the items we know are always defined
+  console.log({
+    "source": item.source,
+    "uri": item.uri
+  });
+  if (++found >= target) {
     console.log("Done. Exiting...");
     //ugly, but tidy exit. We remove the listeners for extra-tidyness (LOL)...
     emitter.removeAllListeners();
