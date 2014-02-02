@@ -75,3 +75,18 @@ Disclaimers
 Even though the example is relatively real-life, specially in terms of the task to accomplish, it still remains an educative effort. So, not every corner case is covered, and some considerations that would usually be part of the solution (e.g. finishing the process in a tidy way instead of just killing it) were disregarded to keep the focus on the subject of discussion and make that more readable.
 
 Also, it is worth noticing that the code sometimes "abuses" of asynchronism. In particular, it is clear that in some cases the tasks the way they are solved are not going to be long-running so one would argue there is no need to issue a callback/promise for them. In this sense, it is important to keep in mind that in a more realistic scenario it may be the case that long-running computations or i/o are needed. For example, the "matching" taks just uses "indexOf", but a more realistic approach would use a full-text parser or even a external service such as solr/Lucene to do a weighted matching, etc. The spirit of this example is to aim for cases on which several i/o or long-running operations will be performed and for such scenario a structure on which every step can be spawned asynchronously is the best model.
+
+Conclusions
+-----------
+
+**SPOLIER ALERT: If you don't like to see the destination before finishing the whole ride, now's a good time to check out the examples and their readme files. If you prefer to see the big picture first and then the details, then keep reading**
+
+After checking this example, I hope you would agree with me that Javascript as a language, and some of the most popular javascript libraries out there, use concepts that have deep roots in functional programming concepts. Therefore, Knowing functional programming can be useful for a javascript programmer, to:
+- better exploit those concepts, because you would know better what do they guarantee.
+- pick the right libraries, by evaluating if they support the concepts properly or not.
+- tweak libraries or develop new utility functions with a strategy that has a theoretical support, instead of doing something that just "feels" correct.
+
+I also hope you would agree with me that functional programming:
+- Is about expressing "what" to do more than "how" to do it, and that's why usually leads to cleaner, more readable code.
+- Is much more useful when approached as a whole. If you just drop tiny functional bits here and there the improvements are not that impressive.
+- Challenge some precepts of imperative programming (e.g. mutation) offering a different point of view that enrichs a programmer perspective.
