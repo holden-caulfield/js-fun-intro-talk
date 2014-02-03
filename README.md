@@ -17,16 +17,16 @@ Each version of the solution addresses the problem in an incrementally more "fun
 
 - [Example #1](https://github.com/holden-caulfield/js-fun-intro-talk/tree/master/1-callbacks) uses *no functional constructs at all* and relies heavily on node's event system. The usual techniques to reduce callback hell (e.g. callback modularization and naming) are used.
 
-- Example #2 adds *some basic functional constructs* that are more or less "mainstream" on javascript due to libraries like underscore.js. Things such as replacing imperative loops by high order functions, function composition, etc.
+- [Example #2](https://github.com/holden-caulfield/js-fun-intro-talk/tree/master/2-functions) adds *some basic functional constructs* that are more or less "mainstream" on javascript due to libraries like underscore.js. Things such as replacing imperative loops by high order functions, function composition, etc.
 
-- Example #3 aims to *go functional to a wider extent* and change the callback oriented structure of the solution into a promises-driven one. Libraries and concepts here are less common in mainstream state-of-the-art javascript.
+- [Example #3](https://github.com/holden-caulfield/js-fun-intro-talk/tree/master/3-promises) aims to *go functional to a wider extent* and change the callback oriented structure of the solution into a promises-driven one. Libraries and concepts here are less common in mainstream state-of-the-art javascript.
 
 Running the code
 ----------------
 
 Each example must be installed and can be run separatedly in isolation. You need to have *node.js* installed on your system. *Node.js v0.10.24* was used during the development and presentation of this example, but since the example doesn't use fancy features, etc. is likely to run well on other versions as well.
 
-Each example has its dependencies explicitly declare the standard way on its own *package.json* file. To prepare/install an example, just get into that particular example's folder run the usual [npm](https://npmjs.org) command, for example:
+Each example has its dependencies explicitly declared the standard way on its own *package.json* file. To prepare/install an example, just get into that particular example's folder run the usual [npm](https://npmjs.org) command, for example:
 
 	cd 1-callbacks
 	npm install
