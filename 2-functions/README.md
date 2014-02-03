@@ -67,4 +67,4 @@ You can check this in full in functions2.js. You would argue that this introduce
 
 Also, notice that we still didn't fix the most important issue on example #1: the callbacks are still there, the flow is still not evident and our code still needs to carefully make sure that the events are emitted after the handlers are registered.
 
-There's an arguably better solution, if we move one step forward into the functional paradigm, and that is what we will explore on example #3
+There's an arguably better solution, if we move one step forward into the functional paradigm, and that is what we will explore on [example #3](https://github.com/holden-caulfield/js-fun-intro-talk/tree/master/3-promises)
