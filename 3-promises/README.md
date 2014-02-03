@@ -1,5 +1,5 @@
-Example 2 - Functions
-=====================
+Example 3 - Promises
+====================
 
 This version of the example aims to go "full functional" including a concept called *promises*. As you will see, using promises lets us use high order functions all around finally addressing the callback hell issue. 
 
@@ -134,6 +134,16 @@ Of course, the interesting thing here is that you implement things such as *prom
 The uber-purist way
 -------------------
 
+In the file promises2.js, you can how it could be the declaration flow on a pure functional language. In particular, *ALL functions are now values*, and the declarations of some functions, when possible, are done using lexical scope within the definition of the functions that use them, similar to how you would do with a *let* statement would do on a functional language.
+
+*I'm not saying you should code this way on javascript, by any means*. You certainly should not. That would be abusing on javascript flexibility and ignoring a lot of its capabilities. All in all would be a narrowed way to approach javascript. However, if you never saw a functional language and want to learn one, maybe taking a quick look at this example would make it easier to approach the learning process.
+
 What was pending
 ----------------
 
+Of course, this example is not perfect. The one thing that I would like to improve the most would be to have one single pipe declaration with the whole process, and let the data be spawned as part of that very pipe. Unfortunately I stumbled while processing the items because there is no straightforward way to convert a promise of a list (the list of items after you fetch a feed) into a list of promises (the contents of each item though http).
+
+If we try to use the functions wrapped with Q.promised, that won't work because the resulting list of promises will be in turn *wrapped in a bigger promise for the list*. Two potential ways to tackle this:
+
+- Use the generator functions support on Q, unfortunately generators are not supported by the stable version of node at the time of writing this example
+- Implement a version of _.fbind and _.fpipe that work with promises, or more explicitly, *list of promises*, as a whole monad. Our version of _.fbind and _.fpipe work with *list* as the monad, with everything else being the underlying value.
