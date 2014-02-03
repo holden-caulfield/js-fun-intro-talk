@@ -18,17 +18,17 @@ Javascript libraries
 There are a lot of them around. The ones that I found more interesting are:
 
 - For general functional programming
--- [Fn.js](http://eliperelman.com/fn.js/)
--- [Bacon](https://github.com/baconjs/bacon.js)
--- [Wu](http://fitzgen.github.io/wu.js/)
--- [Fnky](https://github.com/leoasis/fnky)
--- [Prelude](http://preludels.com/)
+  - [Fn.js](http://eliperelman.com/fn.js/)
+  - [Bacon](https://github.com/baconjs/bacon.js)
+  - [Wu](http://fitzgen.github.io/wu.js/)
+  - [Fnky](https://github.com/leoasis/fnky)
+  - [Prelude](http://preludels.com/)
 - For promises and reactive programming
--- [Q](https://github.com/kriskowal/q)
--- [RSVP](https://github.com/tildeio/rsvp.js)
--- [FutureJS](https://github.com/FuturesJS/FuturesJS)
--- [Promised-io](https://github.com/kriszyp/promised-io)
--- [Bacon](https://github.com/baconjs/bacon.js)
+  - [Q](https://github.com/kriskowal/q)
+  - [RSVP](https://github.com/tildeio/rsvp.js)
+  - [FutureJS](https://github.com/FuturesJS/FuturesJS)
+  - [Promised-io](https://github.com/kriszyp/promised-io)
+  - [Bacon](https://github.com/baconjs/bacon.js)
 
 Viewing and reading material
 ----------------------------
