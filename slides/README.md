@@ -42,11 +42,11 @@ Theorical topics to check out
 -----------------------------
 - Monads
 - Currying/Partial/Compose/Point-free
-- Beneficios de no mutar
+- Benefits of no mutation
 - Promises/Futures
 - Subtyping/Generics
 - Lazyness
-- Librerías
-- Soporte nativo
+- Libraries
+- Native support in JS
 
 
