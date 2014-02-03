@@ -5,7 +5,7 @@ This repository contains the materials used for a presentation called "Functiona
 
 In addition to the presentation slides, the presentation is supported by a coding sample. In the example, a simplified (but still real-life) problem is addressed with javascript using [node.js](http://nodejs.org) and incrementally incorporating functional programming idioms to the solution.
 
-The slides and each example are on separated folders so people can read/run them separatedly. Below there is a general description of the code example approach, and then each example has its own readme to dig into details.
+[The slides](https://github.com/holden-caulfield/js-fun-intro-talk/tree/master/slides) and each example are on separated folders so people can read/run them separatedly. Below there is a general description of the code example approach, and then each example has its own readme to dig into details.
 
 
 The code
