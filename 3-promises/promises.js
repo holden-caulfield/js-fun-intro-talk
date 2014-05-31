@@ -21,7 +21,6 @@ var parser = require('rssparser'),
     {"name": "HTML5 Doctor", "url":"http://feeds2.feedburner.com/html5doctor"},
     {"name": "Nettuts+", "url":"http://feeds.feedburner.com/nettuts-summary"},
     {"name": "CSS Tricks", "url":"http://feeds.feedburner.com/CssTricks"},
-    {"name": "CSS Wizardy", "url":"http://feeds.feedburner.com/csswizardrycom"},
     {"name": "Smashing Magazine", "url":"http://rss1.smashingmagazine.com/feed/"},
     {"name": "24 Ways", "url":"http://feeds.feedburner.com/24ways"},
     {"name": "SitePoint", "url":"http://www.sitepoint.com/feed/"}
